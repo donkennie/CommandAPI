@@ -8,6 +8,8 @@ builder.Services.AddScoped<ICommandAPIRepo, MockCommandAPIRepo>();
 builder.Services.AddScoped<ICommandAPIRepo, SqlCommandAPIRepo>();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddDbContext<CommandContext>(opt =>
 {
     opt.UseSqlServer(connectionString);
