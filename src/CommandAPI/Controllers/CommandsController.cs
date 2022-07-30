@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CommandAPI.Data;
+using CommandAPI.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +23,7 @@ namespace CommandAPI.Controllers
 
         //GET api/commands
 
-       /* [HttpGet]
+        [HttpGet]
         public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
         {
             var commandItems = _repository.GetAllCommands();
@@ -32,7 +33,7 @@ namespace CommandAPI.Controllers
 
         //GET api/commands/{id}
         //[Authorize]       //Apply this attribute to lockdown this ActionResult (or others)
-        [HttpGet("{id}", Name = "GetCommandById")]
+      /*  [HttpGet("{id}", Name = "GetCommandById")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
             var commandItem = _repository.GetCommandById(id);

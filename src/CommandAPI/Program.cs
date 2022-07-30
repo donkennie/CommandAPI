@@ -1,7 +1,10 @@
 using CommandAPI.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
 
 builder.Services.AddScoped<ICommandAPIRepo, MockCommandAPIRepo>();
 
@@ -15,8 +18,13 @@ builder.Services.AddDbContext<CommandContext>(opt =>
     opt.UseSqlServer(connectionString);
 });
 
+//builder.Services.AddEndpointsApiExplorer();
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+//app.UseRouting();
+
+app.MapControllers();
+//app.MapGet("/", () => "Hello World!");
 
 app.Run();
