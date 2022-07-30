@@ -22,7 +22,7 @@ namespace CommandAPI.Controllers
 
         //GET api/commands
 
-        [HttpGet]
+       /* [HttpGet]
         public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
         {
             var commandItems = _repository.GetAllCommands();
@@ -114,6 +114,6 @@ namespace CommandAPI.Controllers
             _repository.SaveChanges();
 
             return NoContent();
-        }
+        }*/
     }
 }

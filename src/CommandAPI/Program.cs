@@ -7,7 +7,7 @@ builder.Services.AddScoped<ICommandAPIRepo, MockCommandAPIRepo>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<StoreContext>(opt =>
+builder.Services.AddDbContext<CommandContext>(opt =>
 {
     opt.UseSqlServer(connectionString);
 });
