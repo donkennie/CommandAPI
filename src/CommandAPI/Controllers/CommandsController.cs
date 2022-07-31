@@ -3,6 +3,7 @@ using CommandAPI.Data;
 using CommandAPI.DTOs;
 using CommandAPI.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommandAPI.Controllers
@@ -77,7 +78,7 @@ namespace CommandAPI.Controllers
         }
 
         //PATCH api/commands/{id}
-     /*   [HttpPatch("{id}")]
+       [HttpPatch("{id}")]
         public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<CommandUpdateDto> patchDoc)
         {
             var commandModelFromRepo = _repository.GetCommandById(id);
@@ -104,7 +105,7 @@ namespace CommandAPI.Controllers
         }
 
         //DELETE api/commands/{id}
-        [HttpDelete("{id}")]
+      /*  [HttpDelete("{id}")]
         public ActionResult DeleteCommand(int id)
         {
             var commandModelFromRepo = _repository.GetCommandById(id);
