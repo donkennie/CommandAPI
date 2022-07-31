@@ -33,7 +33,7 @@ namespace CommandAPI.Controllers
 
         //GET api/commands/{id}
         //[Authorize]       //Apply this attribute to lockdown this ActionResult (or others)
-      /*  [HttpGet("{id}", Name = "GetCommandById")]
+        [HttpGet("{id}", Name = "GetCommandById")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
             var commandItem = _repository.GetCommandById(id);
