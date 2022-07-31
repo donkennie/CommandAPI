@@ -7,11 +7,7 @@ namespace CommandAPI.Data
 
         public void CreateCommand(Command cmd)
         {
-            if (cmd == null)
-            {
-                throw new ArgumentNullException(nameof(cmd));
-            }
-            _context.CommandItems.Add(cmd);
+            throw new System.NotImplementedException();
         }
 
         public void DeleteCommand(Command cmd)
