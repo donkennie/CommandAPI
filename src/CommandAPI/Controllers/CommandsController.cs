@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CommandAPI.Data;
 using CommandAPI.DTOs;
+using CommandAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -76,7 +77,7 @@ namespace CommandAPI.Controllers
         }
 
         //PATCH api/commands/{id}
-        [HttpPatch("{id}")]
+     /*   [HttpPatch("{id}")]
         public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<CommandUpdateDto> patchDoc)
         {
             var commandModelFromRepo = _repository.GetCommandById(id);
