@@ -105,7 +105,7 @@ namespace CommandAPI.Controllers
         }
 
         //DELETE api/commands/{id}
-      /*  [HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         public ActionResult DeleteCommand(int id)
         {
             var commandModelFromRepo = _repository.GetCommandById(id);
@@ -117,6 +117,6 @@ namespace CommandAPI.Controllers
             _repository.SaveChanges();
 
             return NoContent();
-        }*/
+        }
     }
 }
