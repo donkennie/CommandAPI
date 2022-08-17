@@ -1,17 +1,22 @@
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: "windows-latest"
 
 variables:
-  buildConfiguration: 'Release'
+  buildConfiguration: "Release"
 
 steps:
-
-- task: UseDotNet@2
-  displayName: 'Use .NET Core sdk'
-  inputs:
-    packageType: 'sdk'
-    version: '6.0.x'
-    includePreviewVersions: true
+  - task: UseDotNet@2
+    displayName: "Use .NET Core sdk"
+    inputs:
+      packageType: "sdk"
+      version: "6.0.x"
+      includePreviewVersions: true
+  - task: DotNetCoreCLI@2
+    displayName: "dotnet test"
+    inputs:
+      command: test
+      projects: "**/*Tests/*.csproj"
+      testRunTitle: "xUNit Test Run"
